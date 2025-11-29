@@ -1,0 +1,5 @@
+python-telegram-bot==20.7
+pytube
+moviepy
+ffmpeg-python
+requests
