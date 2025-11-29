@@ -2,5 +2,6 @@ python-telegram-bot==20.7
 pytube
 moviepy
 ffmpeg-python
-fpdf2
+fpdf
 requests
+
