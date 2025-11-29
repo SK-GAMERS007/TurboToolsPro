@@ -3,8 +3,8 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, Cal
 import os
 from downloader import download_audio
 from converter import convert_to_pdf
-import os
-TOKEN = os.getenv("7953030889:AAG1BGzpqhnCDlrMWYdYN8PjbcqQzI6AN6k")
+
+TOKEN = "7953030889:AAG1BGzpqhnCDlrMWYdYN8PjbcqQzI6AN6k"
 
 # Start Command
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -60,4 +60,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
