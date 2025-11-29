@@ -51,18 +51,17 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         os.remove(input_path)
         os.remove(output)
 
-def main():
-    # ApplicationBuilder use karo
+
+async def main():
     app = ApplicationBuilder().token(TOKEN).build()
 
-    # Handlers add karo
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(button_click))
     app.add_handler(MessageHandler(filters.ALL & ~filters.COMMAND, handle_message))
 
-    # Start bot
-    app.run_polling()
+    await app.run_polling()  # <-- IMPORTANT async
 
 
-
-
+if __name__ == "__main__":
+    import asyncio
+    asyncio.run(main())
